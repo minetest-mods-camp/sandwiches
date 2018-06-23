@@ -4,7 +4,7 @@
 
 -- NODES --
 
-minetest.register_node("sanwiches:acorn_nutella_block", {
+minetest.register_node("sandwiches:acorn_nutella_block", {
 	description = "Nutella block",
 	groups = {oddly_breakable_by_hand = 2, misc_sandwich = 1},
 	tiles = {"nutella_block.png"}
@@ -28,21 +28,21 @@ minetest.register_craftitem("sandwiches:bread_crumbs", {
 
 minetest.register_craftitem("sandwiches:american_sandwich", {
     description = "American sandwich",
-    on_use = minetest.item_eat(8.50, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(8.50, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "american_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:veggie_sandwich", {
     description = "Veggie sandwich",
-    on_use = minetest.item_eat(7.50, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(7.50, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "veggie_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:meat_sandwich", {
     description = "Meat sandwich",
-    on_use = minetest.item_eat(7.25, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(7.25, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "meat_sandwich.png"
 })
@@ -56,35 +56,35 @@ minetest.register_craftitem("sandwiches:sand_sandwich", {
 
 minetest.register_craftitem("sandwiches:sweet_sandwich", {
     description = "Sweet sandwich",
-    on_use = minetest.item_eat(8, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(8, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "sweet_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:triple_mega_sandwich", {
     description = "Triple mega sandwich",
-    on_use = minetest.item_eat(15, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(15, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "triple_mega_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:nutella_sandwich", {
     description = "Nutella sandwich",
-    on_use = minetest.item_eat(8, sandwiches:bread_crumbs),
+    on_use = minetest.item_eat(8, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
-    inventory_image = "sweet_sandwich.png"
+    inventory_image = "nutella_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:italian_sandwich", {
 	description = "Italian sandwich",
-	on_use = minetest.item_eat(7.75, sandwiches:bread_crumbs),
+	on_use = minetest.item_eat(7.75, "sandwiches:bread_crumbs"),
 	groups = {food_sandwich = 1},
 	inventory_image = "italian_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:jam_sandwich", {
 	description = "Jam sandwich",
-	on_use = minetest.item_eat(7.50, sandwiches:bread_crumbs),
+	on_use = minetest.item_eat(7.50, "sandwiches:bread_crumbs"),
 	groups = {food_sandwich = 1},
 	inventory_image = "jam_sandwich.png"
 })
@@ -134,7 +134,6 @@ minetest.register_craft({
 	output = "sandwiches:bread_slice 4",
 	type = "shapeless",
 	recipe = {"farming:bread"},
-	}
 })
 
 minetest.register_craft({
@@ -150,7 +149,7 @@ minetest.register_craft({
 	output = "sandwiches:veggie_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"farming:cucumber", "farming:tomato", "farming:patato"},
+		{"farming:cucumber", "farming:tomato", "farming:potato"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
@@ -167,9 +166,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "sandwiches:sand_sandwich",
 	recipe = {
-		{"default:sand"},
-		{"default:cactus"},
-		{"default:sand"},
+		{"default:sand", "default:sand", "default:sand"},
+		{"default:cactus", "default:cactus", "default:cactus"},
+		{"default:sand", "default:sand", "default:sand"},
 	}
 })
 
@@ -204,7 +203,7 @@ minetest.register_craft({
 	output = "sandwiches:italian_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"flowers:mushrooms_brown", "farming:tomato", "mobs:cheese"},
+		{"flowers:mushroom_brown", "farming:tomato", "mobs:cheese"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
