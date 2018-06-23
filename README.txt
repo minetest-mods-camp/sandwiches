@@ -8,7 +8,8 @@ bread pudding, made from sandwiches crumbs.
 
 Developed and tested on Minetest 0.4.16
 
-Current version: 1.0 - the very fisrt release;
+Current version: 1.1 fixed some on_use values
+v 1.0 - the very fisrt release;
 
 This mod has some dependencies, so be careful with the installation.
 
