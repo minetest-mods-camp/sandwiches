@@ -14,35 +14,35 @@ minetest.register_node("sandwiches:acorn_nutella_block", {
 
 minetest.register_craftitem("sandwiches:bread_slice", {
     description = "Bread slice",
-    on_use = minetest.item_eat(2),
+    on_use = minetest.item_eat(1),
     groups = {food_sandwich = 1, misc_sandwich = 1},
     inventory_image = "bread_slice.png"
 })
 
 minetest.register_craftitem("sandwiches:bread_crumbs", {
     description = "Bread crumbs",
-    on_use = minetest.item_eat(0.50),
+    on_use = minetest.item_eat(1),
     groups = {food_sandwich = 1, misc_sandwich = 1},
     inventory_image = "bread_crumbs.png"
 })
 
 minetest.register_craftitem("sandwiches:american_sandwich", {
     description = "American sandwich",
-    on_use = minetest.item_eat(8.50, "sandwiches:bread_crumbs"),
+    on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "american_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:veggie_sandwich", {
     description = "Veggie sandwich",
-    on_use = minetest.item_eat(7.50, "sandwiches:bread_crumbs"),
+    on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "veggie_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:meat_sandwich", {
     description = "Meat sandwich",
-    on_use = minetest.item_eat(7.25, "sandwiches:bread_crumbs"),
+    on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "meat_sandwich.png"
 })
@@ -63,7 +63,7 @@ minetest.register_craftitem("sandwiches:sweet_sandwich", {
 
 minetest.register_craftitem("sandwiches:triple_mega_sandwich", {
     description = "Triple mega sandwich",
-    on_use = minetest.item_eat(15, "sandwiches:bread_crumbs"),
+    on_use = minetest.item_eat(11, "sandwiches:bread_crumbs"),
     groups = {food_sandwich = 1},
     inventory_image = "triple_mega_sandwich.png"
 })
@@ -77,14 +77,14 @@ minetest.register_craftitem("sandwiches:nutella_sandwich", {
 
 minetest.register_craftitem("sandwiches:italian_sandwich", {
 	description = "Italian sandwich",
-	on_use = minetest.item_eat(7.75, "sandwiches:bread_crumbs"),
+	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
 	groups = {food_sandwich = 1},
 	inventory_image = "italian_sandwich.png"
 })
 
 minetest.register_craftitem("sandwiches:jam_sandwich", {
 	description = "Jam sandwich",
-	on_use = minetest.item_eat(7.50, "sandwiches:bread_crumbs"),
+	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
 	groups = {food_sandwich = 1},
 	inventory_image = "jam_sandwich.png"
 })
@@ -94,7 +94,7 @@ minetest.register_craftitem("sandwiches:jam_sandwich", {
 
 minetest.register_craftitem("sandwiches:acorn_nutella", {
     description = "Acorn nutella",
-    on_use = minetest.item_eat(3),
+    on_use = minetest.item_eat(2),
     groups = {food_sandwich = 1, misc_sandwich = 1},
     inventory_image = "acorn_nutella.png"
 })
@@ -107,14 +107,14 @@ minetest.register_craftitem("sandwiches:sweet_bread_pudding_raw", {
 
 minetest.register_craftitem("sandwiches:sweet_bread_pudding", {
     description = "Sweet bread pudding",
-    on_use = minetest.item_eat(9.50),
+    on_use = minetest.item_eat(10),
     groups = {food_sandwich = 1, misc_sandwich = 1},
     inventory_image = "sweet_bread_pudding.png"
 })
 
 minetest.register_craftitem("sandwiches:raspberry_jam", {
     description = "Rasperry jam",
-    on_use = minetest.item_eat(3),
+    on_use = minetest.item_eat(2),
     groups = {food_sandwich = 1, misc_sandwich = 1},
     inventory_image = "raspberry_jam.png"
 })
