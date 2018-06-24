@@ -1,5 +1,5 @@
 Ciao!
-This is my first mod, so sorry if there are any errors or english typo.
+This is my first mod, so sorry if there are any errors or english typos.
 
 This mod adds to your minetest game various type of sandwiches,
 including vegetarian, nutella and many more.
@@ -8,8 +8,9 @@ bread pudding, made from sandwiches crumbs.
 
 Developed and tested on Minetest 0.4.16
 
-Current version: 1.1 fixed some on_use values
-v 1.0 - the very fisrt release;
+Current version: v 1.2 - replaced meat with craftable ham
+v 1.1 - fixed some on_use values
+v 1.0 - the very first release;
 
 This mod has some dependencies, so be careful with the installation.
 
