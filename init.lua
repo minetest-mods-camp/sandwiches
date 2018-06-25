@@ -1,18 +1,18 @@
 -- Mod: sandwiches
 
 -- NODES --
-
-minetest.register_node("sandwiches:acorn_nutella_block", {
-	description = "Nutella block",
-	groups = {oddly_breakable_by_hand = 2, misc_sandwich = 1, not_in_creative_inventory=1},
-	tiles = {"nutella_block_top.png",
-        "nutella_block_bottom.png",
-        "nutella_block_side.png",
-        "nutella_block_side.png",
-        "nutella_block_side.png",
-        "nutella_block_front.png"}
-})
-
+if minetest.get_modpath ("moretrees") then
+    minetest.register_node("sandwiches:acorn_nutella_block", {
+		description = "Nutella block",
+		groups = {oddly_breakable_by_hand = 2, misc_sandwich = 1, not_in_creative_inventory=1},
+		tiles = {"nutella_block_top.png",
+			"nutella_block_bottom.png",
+			"nutella_block_side.png",
+			"nutella_block_side.png",
+			"nutella_block_side.png",
+			"nutella_block_front.png"}
+	})
+end
 -- ITEMS --
 
 minetest.register_craftitem("sandwiches:bread_slice", {
@@ -70,13 +70,14 @@ minetest.register_craftitem("sandwiches:triple_mega_sandwich", {
     groups = {food_sandwich = 1},
     inventory_image = "triple_mega_sandwich.png"
 })
-
-minetest.register_craftitem("sandwiches:nutella_sandwich", {
-    description = "Nutella sandwich",
-    on_use = minetest.item_eat(8, "sandwiches:bread_crumbs"),
-    groups = {food_sandwich = 1},
-    inventory_image = "nutella_sandwich.png"
-})
+if minetest.get_modpath ("moretrees") then
+	minetest.register_craftitem("sandwiches:nutella_sandwich", {
+		description = "Nutella sandwich",
+		on_use = minetest.item_eat(8, "sandwiches:bread_crumbs"),
+		groups = {food_sandwich = 1},
+		inventory_image = "nutella_sandwich.png"
+	})
+end
 
 minetest.register_craftitem("sandwiches:italian_sandwich", {
 	description = "Italian sandwich",
@@ -94,13 +95,14 @@ minetest.register_craftitem("sandwiches:jam_sandwich", {
 
 -- NON SANDWICH ITEMS --
 
-
-minetest.register_craftitem("sandwiches:acorn_nutella", {
-    description = "Acorn nutella",
-    on_use = minetest.item_eat(2),
-    groups = {food_sandwich = 1, misc_sandwich = 1},
-    inventory_image = "acorn_nutella.png"
-})
+if minetest.get_modpath ("moretrees") then
+	minetest.register_craftitem("sandwiches:acorn_nutella", {
+		description = "Acorn nutella",
+		on_use = minetest.item_eat(2),
+		groups = {food_sandwich = 1, misc_sandwich = 1},
+		inventory_image = "acorn_nutella.png"
+	})
+end
 
 minetest.register_craftitem("sandwiches:sweet_bread_pudding_raw", {
     description = "Uncooked sweet bread pudding",
@@ -201,15 +203,16 @@ minetest.register_craft({
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
-minetest.register_craft({
-	output = "sandwiches:nutella_sandwich",
-	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
-		{"", "sandwiches:bread_slice", ""},
-	}
-})
+if minetest.get_modpath ("moretrees") then
+	minetest.register_craft({
+		output = "sandwiches:nutella_sandwich",
+		recipe = {
+			{"", "sandwiches:bread_slice", ""},
+			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
+			{"", "sandwiches:bread_slice", ""},
+		}
+	})
+end
 
 minetest.register_craft({
 	output = "sandwiches:italian_sandwich",
@@ -231,25 +234,25 @@ minetest.register_craft({
 
 -- NON SANDWICH CRAFTS --
 
+if minetest.get_modpath ("moretrees") then
+	minetest.register_craft({
+		output = "sandwiches:acorn_nutella 5",
+		recipe = {
+			{"farming:cocoa_beans", "farming:cocoa_beans", "farming:cocoa_beans"},
+			{"farming:sugar", "farming:sugar", "farming:sugar"},
+			{"moretrees:acorn", "moretrees:acorn", "moretrees:acorn"},
+		}
+	})
 
-minetest.register_craft({
-	output = "sandwiches:acorn_nutella 5",
-	recipe = {
-		{"farming:cocoa_beans", "farming:cocoa_beans", "farming:cocoa_beans"},
-		{"farming:sugar", "farming:sugar", "farming:sugar"},
-		{"moretrees:acorn", "moretrees:acorn", "moretrees:acorn"},
-	}
-})
-
-
-minetest.register_craft({
-	output = "sandwiches:nutella_block",
-	recipe = {
-		{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
-		{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
-		{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"}
-	}
-})
+	minetest.register_craft({
+		output = "sandwiches:nutella_block",
+		recipe = {
+			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
+			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
+			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"}
+		}
+	})
+end
 
 minetest.register_craft({
 	output = "sandwiches:sweet_bread_pudding_raw",

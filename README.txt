@@ -8,7 +8,8 @@ bread pudding, made from sandwiches crumbs.
 
 Developed and tested on Minetest 0.4.16
 
-Current version: v 1.2 - replaced meat with craftable ham
+Current version: v 1.3 made moretrees optional
+v 1.2 - replaced meat with craftable ham
 v 1.1 - fixed some on_use values
 v 1.0 - the very first release;
 
