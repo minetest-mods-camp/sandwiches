@@ -17,7 +17,7 @@ This mod has some dependencies, so be careful with the installation.
 
 farming redo by TenPlus1
 mobs by TenPlus1
-moretrees by VanessaE
+moretrees by VanessaE - Optional (thanks R-One)
 
 Licenses @
 
