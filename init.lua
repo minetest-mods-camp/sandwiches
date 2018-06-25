@@ -199,7 +199,7 @@ minetest.register_craft({
 	output = "sandwiches:triple_mega_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"sandwiches:american_sandwich", "sandwiches:meat_sandwich", "sandwiches:veggie_sandwich"},
+		{"sandwiches:american_sandwich", "sandwiches:ham_sandwich", "sandwiches:veggie_sandwich"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
