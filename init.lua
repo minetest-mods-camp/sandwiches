@@ -169,7 +169,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "sandwiches:meat_sandwich",
+	output = "sandwiches:ham_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
 		{"sandwiches:ham", "sandwiches:ham", "sandwiches:ham"},
