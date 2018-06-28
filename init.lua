@@ -1,10 +1,13 @@
 -- Mod: sandwiches
 
+minetest.register_alias("sandwiches:meat_sandwich","sandwiches:ham_sandwich")
+
 -- NODES --
 if minetest.get_modpath ("moretrees") then
     minetest.register_node("sandwiches:acorn_nutella_block", {
 		description = "Nutella block",
 		groups = {oddly_breakable_by_hand = 2, misc_sandwich = 1, not_in_creative_inventory=1},
+		paramtype2 = "facedir",
 		tiles = {"nutella_block_top.png",
 			"nutella_block_bottom.png",
 			"nutella_block_side.png",
