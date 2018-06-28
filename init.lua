@@ -1,6 +1,7 @@
 -- Mod: sandwiches
 
 minetest.register_alias("sandwiches:meat_sandwich","sandwiches:ham_sandwich")
+minetest.register_alias("sandwiches:nutella_block","sandwiches:acorn:nutella_block")
 
 -- NODES --
 if minetest.get_modpath ("moretrees") then
@@ -248,7 +249,7 @@ if minetest.get_modpath ("moretrees") then
 	})
 
 	minetest.register_craft({
-		output = "sandwiches:nutella_block",
+		output = "sandwiches:acorn_nutella_block",
 		recipe = {
 			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
 			{"sandwiches:acorn_nutella", "sandwiches:acorn_nutella", "sandwiches:acorn_nutella"},
