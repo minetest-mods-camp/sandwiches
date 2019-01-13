@@ -5,10 +5,13 @@ This mod adds to your minetest game various type of sandwiches,
 including vegetarian, nutella and many more.
 There are also some other related food like jam and a sweet 
 bread pudding, made from sandwiches crumbs.
+You can now have PB&J sandwich!
 
 Developed and tested on Minetest 0.4.16
 
-Current version: v 1.3 made moretrees optional
+Current version: Current version: v 1.5 added ethereal compatibility and lots of sandwiches
+v 1.4 - peanut crop and bacon added
+v 1.3 - made moretrees optional
 v 1.2 - replaced meat with craftable ham
 v 1.1 - fixed some on_use values
 v 1.0 - the very first release;
