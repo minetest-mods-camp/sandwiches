@@ -227,6 +227,13 @@ minetest.register_craft({
     cooktime = 15,
 })
 
+minetest.register_craft({
+    type = "cooking",
+    output = "sandwiches:crispy_bacon",
+    recipe = "sandwiches:raw_bacon",
+    cooktime = 5,
+})
+
 -- CRAFTS --
 
 minetest.register_craft({
@@ -410,7 +417,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "sandwiches:bacon 3",
+	output = "sandwiches:raw_bacon 3",
 	type = "shapeless";
 	recipe = {"mobs:pork_raw", "farming:cutting_board"},
 	replacements = {{"group:food_cutting_board", "farming:cutting_board"}}
