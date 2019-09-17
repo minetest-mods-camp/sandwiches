@@ -2,12 +2,12 @@ Ciao!
 This is my first mod, so sorry if there are any errors or english typos.
 
 This mod adds to your minetest game various type of sandwiches,
-including vegetarian, nutella and many more.
-There are also some other related food like jam and a sweet 
-bread pudding, made from sandwiches crumbs.
-You can now have PB&J sandwich!
+including vegetarian, nutella bacon, pb&j, bacon and many more
+if you have supported mods like BBQ and cucina_vegana!
+There are also some other related food like a sweet bread pudding,
+made from sandwiches crumbs and jam.
 
-Developed and tested on Minetest 0.4.17
+Developed and tested on Minetest 0.4.17, works for 0.4.16 too.
 
 Current version: Current version: v1.7 added cucina_vegana compatibility + more sandwiches
 v 1.6 - added bbq compatibility + chicken strips
