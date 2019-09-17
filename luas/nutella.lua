@@ -1,13 +1,15 @@
 minetest.register_node("sandwiches:nutella_block", {
 		description = "Nutella block",
-		groups = {oddly_breakable_by_hand = 2, misc_sandwich = 1, not_in_creative_inventory=1},
+		groups = {snappy = 1 , oddly_breakable_by_hand = 3, not_in_creative_inventory=1},
 		paramtype2 = "facedir",
 		tiles = {"nutella_block_top.png",
 			"nutella_block_bottom.png",
 			"nutella_block_side.png",
 			"nutella_block_side.png",
 			"nutella_block_side.png",
-			"nutella_block_front.png"}
+			"nutella_block_front.png"
+		},
+		sounds = default.node_sound_glass_defaults(),
 	})
 	
 minetest.register_craftitem("sandwiches:nutella_sandwich", {
@@ -20,10 +22,12 @@ minetest.register_craftitem("sandwiches:nutella_sandwich", {
 minetest.register_craftitem("sandwiches:acorn_nutella", {
 		description = "Acorn nutella",
 		on_use = minetest.item_eat(2),
-		groups = {misc_sandwich = 1},
+		groups = {food_nutella = 1},
 		inventory_image = "acorn_nutella.png"
 	})
-	
+
+-- CRAFTS --
+
 minetest.register_craft({
 		output = "sandwiches:nutella_sandwich",
 		recipe = {

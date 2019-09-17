@@ -7,9 +7,11 @@ There are also some other related food like jam and a sweet
 bread pudding, made from sandwiches crumbs.
 You can now have PB&J sandwich!
 
-Developed and tested on Minetest 0.4.16
+Developed and tested on Minetest 0.4.17
 
-Current version: Current version: v 1.5 added ethereal compatibility and lots of sandwiches
+Current version: Current version: v1.7 added cucina_vegana compatibility + more sandwiches
+v 1.6 - added bbq compatibility + chicken strips
+v 1.5 - added ethereal compatibility and lots of sandwiches
 v 1.4 - peanut crop and bacon added
 v 1.3 - made moretrees optional
 v 1.2 - replaced meat with craftable ham
@@ -21,14 +23,11 @@ This mod has some dependencies, so be careful with the installation.
 farming redo by TenPlus1
 mobs by TenPlus1
 moretrees by VanessaE - Optional (thanks R-One)
+ethereal by TenPlus1 - Optional
+Your Dad's BBQ Mod (aka bbq) by Grizzly Adam - Optional
+cucina_vegana by Clyde - Optional (thanks friend)
 
-Licenses @
-
-https://notabug.org/TenPlus1/Farming/src/master/license.txt
-https://notabug.org/TenPlus1/mobs_redo/src/master/license.txt
-https://gitlab.com/VanessaE/moretrees/blob/master/LICENSE
-
-This mod has a LGPL Licence.
+This mod has a LGPL v2.1 Licence.
 
 Installation
 
