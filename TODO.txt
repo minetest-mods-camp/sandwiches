@@ -1,11 +1,9 @@
-picnic basket (little storage for group:food_sandwiches)
-toasts,
-cheese support:
-grilled cheese sandwich (the one from the sims 2)
-fairy bread, (butter and sprinkles)
-croque monsier, croce madame
+X picnic basket (little storage for group:food_sandwiches)
 
-if there will be salmon: lox sandwich
-		shrimps: po' boy
+cheese support (add bruschetta then?)
+"mozzarella", "tomato", "olive_oil",
+"garlic_bread", "garlic_bread", "garlic_bread",
 
-ketchup and maionesse (need lemontree)
+X ketchup and maionesse -- what is their purpose ???
+im not adding them until they have multiple purposes
+

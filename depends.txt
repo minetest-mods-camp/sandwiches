@@ -1,8 +1,15 @@
 default
-flowers
 farming
-mobs
+flowers?
+mobs?
+mobs_animal?
+petz?
+animalia?
 moretrees?
+cacaotree?
 ethereal?
 bbq?
 cucina_vegana?
+bonemeal?
+xdecor?
+potted_farming?

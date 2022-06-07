@@ -1,143 +1,18 @@
+local skillet = "sandwiches:skillet"
+local mope = "sandwiches:mortar_pestle"
+if minetest.global_exists("farming") and  farming.mod == "redo" then
+  mope = "farming:mortar_pestle"
+	skillet = "farming:skillet"
+end
+
 -- SANDWICHES --
 
 minetest.register_craftitem("sandwiches:tasty_asparagus_sandwich", {
 	description = "Tasty asparagus sandwich",
 	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1,  food_vegan = 1},
+	groups = {food = 7, food_sandwich = 1,  food_vegan = 1},
 	inventory_image = "tasty_asparagus_sandwich.png"
 })
-
-minetest.register_craftitem("sandwiches:ham_and_asparagus_sandwich", {
-	description = "Ham and asparagus sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1},
-	inventory_image = "ham_and_asparagus_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:tasty_tofu_sandwich", {
-	description = "Tasty tofu sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1},
-	inventory_image = "tasty_tofu_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:classic_sandwich", {
-	description = "Classic sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1},
-	inventory_image = "classic_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:classic_vegan_sandwich", {
-	description = "Classic vegan sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1,  food_vegan = 1},
-	inventory_image = "classic_vegan_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:tofu_sandwich", {
-	description = "Tofu sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1,  food_vegan = 1},
-	inventory_image = "tofu_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:blueberry_jam_sandwich", {
-	description = "Blueberry jam sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1},
-	inventory_image = "blueberry_jam_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:gourmet_meat_sandwich", {
-	description = "Gourmet meat sandwich",
-	on_use = minetest.item_eat(9, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1},
-	inventory_image = "gourmet_meat_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:gourmet_vegan_sandwich", {
-	description = "Gourmet vegan sandwich",
-	on_use = minetest.item_eat(9, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1,  food_vegan = 1},
-	inventory_image = "gourmet_vegan_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:tasty_veggie_sandwich", {
-	description = "Tasty veggie sandwich",
-	on_use = minetest.item_eat(9, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1,  food_vegan = 1},
-	inventory_image = "tasty_veggie_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:club_sandwich", {
-	description = "Club sandwich",
-	on_use = minetest.item_eat(12, "sandwiches:bread_crumbs"),
-	groups = {food_big_sandwich = 1, },
-	inventory_image = "club_sandwich.png"
-})
-
-minetest.register_craftitem("sandwiches:blt_sandwich", {
-	description = "BLT sandwich",
-	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
-	groups = {food_sandwich = 1, },
-	inventory_image = "blt_sandwich.png"
-})
-
--- NON SANDWICH ITEMS
-
-minetest.register_craftitem("sandwiches:butter_carrots", {
-	description = "Butter carrots",
-	on_use = minetest.item_eat(2),
-	inventory_image = "butter_carrots.png"
-})
-
-minetest.register_craftitem("sandwiches:roasted_potatoes", {
-	description = "Roasted potatoes",
-	on_use = minetest.item_eat(2),
-	inventory_image = "roasted_potatoes.png"
-})
-
--- CRAFT --
-
-minetest.register_craft({
-	output = "sandwiches:bread_slice 6",
-	type = "shapeless",
-	recipe = {"cucina_vegana:ciabatta_bread"},
-})
-
-
-minetest.register_craft({
-	output = "sandwiches:butter_carrots 5",
-	type = "shapeless",
-	recipe = {
-		"group:food_carrot", "group:food_carrot", "group:food_carrot",
-		"group:food_skillet", "group:food_butter", "cucina_vegana:parsley",
-	},
-	replacements = {{"group:food_skillet", "farming:skillet"}}
-})
-
-minetest.register_craft({
-	output = "sandwiches:roasted_potatoes 5",
-	type = "shapeless",
-	recipe = {
-		"group:food_potato", "group:food_potato", "group:food_potato",
-		"group:food_skillet", "group:food_oil", "cucina_vegana:rosemary",
-	},
-	replacements = {{"group:food_skillet", "farming:skillet"}}
-})
-
--- SANDWICHES CRAFT --
-
-minetest.register_craft({
-	output = "sandwiches:hot_veggie_sandwich",
-	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:asparagus", "group:food_hot", "cucina_vegana:lettuce"},
-		{"", "sandwiches:bread_slice", ""},
-	}
-})
-
 minetest.register_craft({
 	output = "sandwiches:tasty_asparagus_sandwich",
 	recipe = {
@@ -147,99 +22,138 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "sandwiches:ham_and_asparagus_sandwich",
-	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:asparagus", "sandwiches:ham" ,"cucina_vegana:asparagus"},
-		{"", "sandwiches:bread_slice", ""},
-	}
-})
+if sandwiches.ingredient_support.meat then
 
+  minetest.register_craftitem("sandwiches:ham_and_asparagus_sandwich", {
+  	description = "Ham and asparagus sandwich",
+  	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
+  	groups = {food = 7, food_sandwich = 1},
+  	inventory_image = "ham_and_asparagus_sandwich.png"
+  })
+  minetest.register_craft({
+  	output = "sandwiches:ham_and_asparagus_sandwich",
+  	recipe = {
+  		{"", "sandwiches:bread_slice", ""},
+  		{"cucina_vegana:asparagus", "group:food_ham" ,"cucina_vegana:asparagus"},
+  		{"", "sandwiches:bread_slice", ""},
+  	}
+  })
+
+  minetest.register_craftitem("sandwiches:club_sandwich", {
+  	description = "Club sandwich",
+  	on_use = minetest.item_eat(18, "sandwiches:bread_crumbs"),
+  	groups = {food = 18, food_sandwich = 1, },
+  	inventory_image = "club_sandwich.png"
+  })
+  minetest.register_craft({
+  	output = "sandwiches:club_sandwich",
+  	recipe = {
+  		{"sandwiches:bread_slice", "group:food_tomato" , "sandwiches:bread_slice"},
+  		{"sandwiches:chicken_strips", "cucina_vegana:sauce_hollandaise" ,"group:food_bacon" },
+  		{"sandwiches:bread_slice", "group:food_lettuce", "sandwiches:bread_slice"},
+  	}
+  })
+
+
+end -- if ham is present
+
+minetest.register_craftitem("sandwiches:tasty_tofu_sandwich", {
+	description = "Tofu and asparagus sandwich",
+	on_use = minetest.item_eat(8, "sandwiches:bread_crumbs"),
+	groups = {food = 8, food_sandwich = 1, food_vegan = 1},
+	inventory_image = "tasty_tofu_sandwich.png"
+})
 minetest.register_craft({
 	output = "sandwiches:tasty_tofu_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:asparagus", "cucina_vegana:tofu" ,"cucina_vegana:asparagus"},
+		{"cucina_vegana:asparagus", "cucina_vegana:tofu_cooked" ,"cucina_vegana:asparagus"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
 minetest.register_craft({
-	output = "sandwiches:classic_sandwich",
+	output = "sandwiches:tasty_tofu_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:lettuce", "sandwiches:ham" ,"farming:tomato" },
+		{"cucina_vegana:asparagus", "farming:tofu_cooked" ,"cucina_vegana:asparagus"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
 
-
-minetest.register_craft({
-	output = "sandwiches:classic_vegan_sandwich",
-	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:lettuce", "cucina_vegana:tofu" ,"farming:tomato" },
-		{"", "sandwiches:bread_slice", ""},
-	}
+minetest.register_craftitem("sandwiches:tofu_sandwich", {
+	description = "Tofu sandwich",
+	on_use = minetest.item_eat(7, "sandwiches:bread_crumbs"),
+	groups = {food = 7, food_sandwich = 1,  food_vegan = 1},
+	inventory_image = "tofu_sandwich.png"
 })
-
 minetest.register_craft({
 	output = "sandwiches:tofu_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:chives","cucina_vegana:tofu", "cucina_vegana:rosemary"},
+		{"cucina_vegana:chives","cucina_vegana:tofu_cooked", "cucina_vegana:rosemary"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
 minetest.register_craft({
-	output = "sandwiches:blueberry_jam_sandwich",
+	output = "sandwiches:tofu_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:blueberry_jam", "cucina_vegana:blueberry_jam", "cucina_vegana:blueberry_jam"},
+		{"cucina_vegana:chives","farming:tofu_cooked", "cucina_vegana:rosemary"},
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
 
+minetest.register_craftitem("sandwiches:gourmet_sandwich", {
+	description = "Gourmet sandwich",
+	on_use = minetest.item_eat(12, "sandwiches:bread_crumbs"),
+	groups = {food = 12, food_sandwich = 1},
+	inventory_image = "gourmet_vegan_sandwich.png"
+})
+minetest.register_alias("sandwiches:gourmet_meat_sandwich", "sandwiches:gourmet_sandwich")
+minetest.register_alias("sandwiches:gourmet_vegan_sandwich", "sandwiches:gourmet_sandwich")
+
 minetest.register_craft({
-	output = "sandwiches:gourmet_meat_sandwich",
+  output = "sandwiches:gourmet_sandwich",
+  recipe = {
+    {"", "sandwiches:bread_slice", ""},
+    {"cucina_vegana:chives", "group:food_ham" ,"cucina_vegana:sauce_hollandaise" },
+    {"", "sandwiches:bread_slice", ""},
+  }
+})
+minetest.register_craft({
+  output = "sandwiches:gourmet_sandwich",
+  recipe = {
+    {"", "sandwiches:bread_slice", ""},
+    {"cucina_vegana:chives", "group:food_chicken_strips" ,"cucina_vegana:sauce_hollandaise" },
+    {"", "sandwiches:bread_slice", ""},
+  }
+})
+minetest.register_craft({
+	output = "sandwiches:gourmet_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:chives", "sandwiches:ham" ,"cucina_vegana:sauce_hollandaise" },
+		{"cucina_vegana:chives", "cucina_vegana:tofu_cooked" ,"cucina_vegana:sauce_hollandaise" },
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
 minetest.register_craft({
-	output = "sandwiches:gourmet_meat_sandwich",
+	output = "sandwiches:gourmet_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:chives", "sandwiches:chiken_strips" ,"cucina_vegana:sauce_hollandaise" },
+		{"cucina_vegana:chives", "farming:tofu_cooked" ,"cucina_vegana:sauce_hollandaise" },
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
 minetest.register_craft({
-	output = "sandwiches:gourmet_vegan_sandwich",
-	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"cucina_vegana:chives", "cucina_vegana:tofu" ,"cucina_vegana:sauce_hollandaise" },
-		{"", "sandwiches:bread_slice", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "sandwiches:gourmet_vegan_sandwich",
+	output = "sandwiches:gourmet_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
 		{"cucina_vegana:chives", "cucina_vegana:imitation_meat" ,"cucina_vegana:sauce_hollandaise" },
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
-
 minetest.register_craft({
-	output = "sandwiches:gourmet_vegan_sandwich",
+	output = "sandwiches:gourmet_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
 		{"cucina_vegana:chives", "cucina_vegana:imitation_poultry" ,"cucina_vegana:sauce_hollandaise" },
@@ -247,31 +161,91 @@ minetest.register_craft({
 	}
 })
 
+-- ALREADY EXISTING SANDWICHES CRAFT --
+
 minetest.register_craft({
-	output = "sandwiches:tasty_veggie_sandwich",
+	output = "sandwiches:classic_sandwich",
 	recipe = {
 		{"", "sandwiches:bread_slice", ""},
-		{"sandwiches:caramelized_onion", "sandwiches:butter_carrots" ,"sandwiches:roasted_potatoes" },
+		{"group:food_lettuce", "cucina_vegana:tofu_cooked", "group:food_tomato" },
 		{"", "sandwiches:bread_slice", ""},
 	}
 })
 
 minetest.register_craft({
-	output = "sandwiches:club_sandwich",
+	output = "sandwiches:hot_veggie_sandwich",
 	recipe = {
-		{"sandwiches:bread_slice", "group:food_tomato" , "sandwiches:bread_slice"},
-		{"sandwiches:chiken_strips", "cucina_vegana:sauce_hollandaise" ,"sandwiches:crispy_bacon" },
-		{"sandwiches:bread_slice", "cucina_vegana:lettuce", "sandwiches:bread_slice"},
-	}
+		{"", "sandwiches:bread_slice", ""},
+		{"cucina_vegana:asparagus", "sandwiches:tabasco", "group:food_lettuce"},
+		{"", "sandwiches:bread_slice", ""},
+	},
+	replacements = {{"sandwiches:tabasco", "vessels:glass_bottle"},}
 })
 
 minetest.register_craft({
-	output = "sandwiches:blt_sandwich",
+		output = "sandwiches:fancy_garlic_sandwich",
+		recipe = {
+			{"", "sandwiches:garlic_bread", ""},
+			{"cucina_vegana:tofu_cooked", "sandwiches:trifolat_mushrooms", "group:food_cheese"},
+			{"", "sandwiches:garlic_bread", ""},
+		},
+})
+minetest.register_craft({
+		output = "sandwiches:fancy_garlic_sandwich",
+		recipe = {
+			{"", "sandwiches:garlic_bread", ""},
+			{"farming:tofu_cooked", "sandwiches:trifolat_mushrooms", "group:food_cheese"},
+			{"", "sandwiches:garlic_bread", ""},
+		},
+})
+
+minetest.register_craft({
+		output = "sandwiches:tasty_garlic_sandwich",
+		recipe = {
+			{"", "sandwiches:garlic_bread", ""},
+			{"group:food_tomato", "cucina_vegana:tofu_cooked", "group:food_cheese"},
+			{"", "sandwiches:garlic_bread", ""},
+		},
+})
+minetest.register_craft({
+		output = "sandwiches:tasty_garlic_sandwich",
+		recipe = {
+			{"", "sandwiches:garlic_bread", ""},
+			{"group:food_tomato", "farming:tofu_cooked", "group:food_cheese"},
+			{"", "sandwiches:garlic_bread", ""},
+		},
+})
+
+--ALREADY EXISTING NON SANDWICH ITEMS
+
+minetest.register_craft({
+	output = "sandwiches:tabasco 3",
+	type = "shapeless";
+	recipe = {"group:food_chili", "group:food_chili", "group:food_chili",
+			  "group:food_chili", "group:food_chili", "group:food_chili",
+			  "group:food_mortar_pestle", "vessels:glass_bottle",
+	},
+	replacements = {{"group:food_mortar_pestle", mope }}
+})
+
+minetest.register_craft({
+	output = "sandwiches:roasted_potatoes 5",
+	type = "shapeless",
 	recipe = {
-		{"", "sandwiches:bread_slice", ""},
-		{"sandwiches:crispy_bacon", "group:food_tomato" ,"cucina_vegana:lettuce" },
-		{"", "sandwiches:bread_slice", ""},
-	}
+		"group:food_potato", "group:food_potato",
+		"group:food_skillet", "group:food_oil", "cucina_vegana:rosemary",
+	},
+	replacements = {{"group:food_skillet", "farming:skillet"}, {"group:food_oil", "vessels:glass_bottle"}}
+})
+
+minetest.register_craft({
+		output = "sandwiches:garlic_bread 4",
+		recipe = {
+			{"", "cucina_vegana:garlic", ""},
+			{"sandwiches:bread_slice", "sandwiches:bread_slice", "sandwiches:bread_slice"},
+			{"group:food_skillet", "sandwiches:bread_slice", "group:food_butter"},
+		},
+		replacements = {{"group:food_skillet", skillet}}
 })
 
 -- MOLASSES --
@@ -281,8 +255,8 @@ if minetest.registered_items["sandwiches:caramelized_onion"] then
 	minetest.register_craft({
 		output = "sandwiches:caramelized_onion 4",
 		type = "shapeless";
-		recipe = {"farming:onion", "cucina_vegana:molasses", "group:food_skillet"},
+		recipe = {"group:food_onion", "group:food_onion", "cucina_vegana:molasses", "group:food_skillet"},
 		replacements = {{"group:food_skillet", "farming:skillet"}}
 	})
-	
+
 end
