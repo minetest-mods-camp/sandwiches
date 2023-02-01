@@ -5,12 +5,12 @@ if minetest.global_exists("farming") and  farming.mod == "redo" then
 	mix = "farming:mixing_bowl"
 end
 
--- food_toast = 1 means sandwich wich craft uses skillet+butter or uses garlic bread slice
+-- food_toasted = 1 means sandwich wich craft uses skillet+butter or uses garlic bread slice
 
 minetest.register_craftitem("sandwiches:grilled_hot_cheesy_sandwich", {
 		description = "Grilled hot cheese sandwich",
 		on_use = minetest.item_eat(10, "sandwiches:bread_crumbs"),
-		groups = {food = 10, food_sandwich = 1, food_toast = 1},
+		groups = {food = 10, food_sandwich = 1, food_toasted = 1},
 		inventory_image = "grilled_hot_cheesy_sandwich.png"
 })
 minetest.register_craft({
@@ -43,7 +43,7 @@ minetest.register_craft({
 minetest.register_craftitem("sandwiches:tasty_garlic_sandwich", {
 		description = "Tasty garlic sandwich",
 		on_use = minetest.item_eat(16, "sandwiches:bread_crumbs"),
-		groups = {food = 16, food_sandwich = 1, food_toast = 1},
+		groups = {food = 16, food_sandwich = 1, food_toasted = 1},
 		inventory_image = "tasty_garlic_sandwich.png"
 })
 minetest.register_craft({
@@ -58,7 +58,7 @@ minetest.register_craft({
 minetest.register_craftitem("sandwiches:fancy_garlic_sandwich", {
 		description = "Fancy garlic sandwich",
 		on_use = minetest.item_eat(18, "sandwiches:bread_crumbs"),
-		groups = {food = 18, food_sandwich = 1, food_toast = 1},
+		groups = {food = 18, food_sandwich = 1, food_toasted = 1},
 		inventory_image = "fancy_garlic_sandwich.png"
 })
 minetest.register_craft({
@@ -81,7 +81,7 @@ if minetest.registered_items["sandwiches:ham"] then
 minetest.register_craftitem("sandwiches:croque_monsieur", {
 		description = "Croque Monsier",
 		on_use = minetest.item_eat(13, "sandwiches:bread_crumbs"),
-		groups = {food = 13, food_sandwich = 1, food_toast = 1},
+		groups = {food = 13, food_sandwich = 1, food_toasted = 1},
 		inventory_image = "croque_monsieur.png"
 })
 minetest.register_craft({
@@ -101,7 +101,7 @@ if minetest.registered_items["sandwiches:chicken_strips"] then
 minetest.register_craftitem("sandwiches:croque_madame", {
 		description = "Croque madame",
 		on_use = minetest.item_eat(16, "sandwiches:bread_crumbs"),
-		groups = {food = 16, food_sandwich = 1, food_toast = 1},
+		groups = {food = 16, food_sandwich = 1, food_toasted = 1},
 		inventory_image = "croque_madame.png"
 })
 minetest.register_craft({
