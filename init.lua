@@ -474,8 +474,10 @@ end
 -- ALIASES for compatibility, no unknown nodes or items must exist ---
 
 --minetest.register_alias("name", "convert_to")
-minetest.register_alias("sandwiches:tasty_bacon", "sandwiches:tasty_meat")
-minetest.register_alias("sandwiches:tasty_chicken", "sandwiches:tasty_meat")
+minetest.register_alias("sandwiches:rasperry_jam_sandwich", "sandwiches:raspberry_jam_sandwich")
+minetest.register_alias("sandwiches:tasty_bacon_sandwich", "sandwiches:tasty_meat_sandwich")
+minetest.register_alias("sandwiches:tasty_chicken_sandwich", "sandwiches:tasty_meat_sandwich")
+minetest.register_alias("sandwiches:tasty_ham_sandwich", "sandwiches:tasty_meat_sandwich")
 minetest.register_alias("sandwiches:classic_vegan_sandwich", "sandwiches:classic_sandwich")
 
 -- SPECIAL SANDWICHES --
