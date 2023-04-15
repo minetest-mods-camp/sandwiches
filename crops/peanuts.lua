@@ -118,7 +118,7 @@ if minetest.global_exists("farming") and  farming.mod == "redo" then
 	minetest.register_node("sandwiches:peanut_6", table.copy(crop_def))
 
 	if minetest.get_modpath("bonemeal") then
-		bonemeal:add_crop({ {"sandwiches:peanut_", 5, "sandwiches:seed_peanut"}, })
+		bonemeal:add_crop({ {"sandwiches:peanut_", 6, "sandwiches:seed_peanut"}, })
 	end
 
 else -- farming-redo not present -----------------------------------------------
